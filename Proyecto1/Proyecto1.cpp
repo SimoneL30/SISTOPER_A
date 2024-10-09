@@ -21,7 +21,7 @@ const int PRODUCER_RETRY_DELAY_MS = 500;  // Tiempo de espera para que un produc
 ofstream logFile("producer-consumer.txt");  
 std::mutex print_mutex;  // Mutex para sincronizar impresiones y evitar conflictos
 
-// Función para imprimir y escribir en archivo sin usar `to_string`
+// Función para imprimir y escribir en archivo 
 void printMessage(const std::string& message) {
     std::lock_guard<std::mutex> lock(print_mutex);  // Bloquear el mutex para asegurar exclusividad en las impresiones
     cout << message;  // Imprimir en la consola
