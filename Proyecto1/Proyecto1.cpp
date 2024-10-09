@@ -17,7 +17,7 @@ int NC;   // Número de consumidores
 const int MAX_WAIT_TIME_MS = 5000;  // Tiempo máximo de espera para consumidores (en milisegundos)
 const int PRODUCER_RETRY_DELAY_MS = 500;  // Tiempo de espera para que un productor vuelva a intentar insertar si el buffer está lleno
 
-// Archivo de salida para guardar los logs
+// Archivo de salida para guardar los datos
 ofstream logFile("producer-consumer.txt");  
 std::mutex print_mutex;  // Mutex para sincronizar impresiones y evitar conflictos
 
